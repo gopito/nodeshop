@@ -1,5 +1,5 @@
 // Require needed modules
-var db = require('../data'),
+var db = require('../data.js'),
 config = require('../config.json');
 
 // Export functions
@@ -25,7 +25,12 @@ module.exports = {
                     cart: req.session.cart,
                     categories: categories,
                     featured: featured
-                });
+                },
+                    function(err, rendered) {
+                        // console.log(rendered);
+                        res.writeHead(200, {'Content-Type': 'text/html'});
+                        res.end(rendered);
+                    });
             });
         });
     },
@@ -44,7 +49,7 @@ module.exports = {
                 logged: req.isAuthenticated(),
                 user: req.user,
                 cart: req.session.cart,
-                categories: categories,
+                categories: categories
             });
         });
     },
@@ -63,8 +68,8 @@ module.exports = {
                 logged: req.isAuthenticated(),
                 user: req.user,
                 cart: req.session.cart,
-                categories: categories,
+                categories: categories
             });
         });
-    },
+    }
 };
