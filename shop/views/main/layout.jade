@@ -1,7 +1,8 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
     title #{store} | #{title}
+    meta(charset='utf-8')
     link(href="/css/bootstrap.min.css", rel="stylesheet")
     link(href="/css/main.css", rel="stylesheet")
   body
@@ -11,21 +12,21 @@ html(lang="en")
           .container
             ul.nav
               li
-                a(href="/") Home
+                a(href="/") Главная
               li
-                a(href="/about") About
+                a(href="/about") О магазине
               li
-                a(href="/contact") Contact
+                a(href="/contact") Контакты
               if (!locals.logged)
                 li
-                  a(data-toggle="modal", data-target="#modal", href="/modals/register") Register
+                  a(data-toggle="modal", data-target="#modal", href="/modals/register") Регистрация
                 li
-                  a(data-toggle="modal", data-target="#modal", href="/modals/login") Login 
+                  a(data-toggle="modal", data-target="#modal", href="/modals/login") Вход
               else
                 li
-                  a(href="/account/home") Account
+                  a(href="/account/home") Личный кабинет
                 li       
-                  a(href="/account/logout") Logout
+                  a(href="/account/logout") Выход
             #cart
               include ../cart/cart
     .container

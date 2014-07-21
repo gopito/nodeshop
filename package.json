@@ -19,6 +19,8 @@
         "expect.js": "~0.3.1",
         "mocha": "~1.18.2",
         "superagent": "~0.17.0",
-        "mongoskin": "~1.4.1"
+        "mongoskin": "~1.4.1",
+        "i18next": "*",
+        "cloudinary": "*"
     }
 }

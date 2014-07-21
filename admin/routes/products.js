@@ -81,7 +81,7 @@ module.exports = {
                             retail: req.body.retail,
                             sale: req.body.sale,
                             cost: req.body.cost
-                        },
+                        }
                     });
                     
                 newProduct.save(function(err){
