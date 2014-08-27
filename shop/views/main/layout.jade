@@ -17,16 +17,6 @@ html(lang='en')
                 a(href="/about") О магазине
               li
                 a(href="/contact") Контакты
-              if (!locals.logged)
-                li
-                  a(data-toggle="modal", data-target="#modal", href="/modals/register") Регистрация
-                li
-                  a(data-toggle="modal", data-target="#modal", href="/modals/login") Вход
-              else
-                li
-                  a(href="/account/home") Личный кабинет
-                li       
-                  a(href="/account/logout") Выход
             #cart
               include ../cart/cart
     .container
